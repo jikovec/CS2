@@ -28,13 +28,13 @@ https://settings.gg/1ef_official
 
 1. **Clone or Download the Repository:**
    ```bash
-   git clone https://github.com/yourusername/cs2-configs.git
+   git clone https://github.com/jikovec/cs2-configs.git
    ```
 
 2. **Copy the Config Files:**  
    Place the downloaded config files into your CS2 configuration directory. This is typically found at:
    ```
-   C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike 2\cs2\cfg\
+   C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg
    ```
    (Adjust the path if your installation directory differs.)
 
@@ -51,19 +51,19 @@ https://settings.gg/1ef_official
 
 Each configuration file is extensively commented for clarity. Here’s a brief overview of what each file offers:
 
-- **Pro‑Level Autoexec:**  
+- **Autoexec:**
   Optimizes network settings for low latency, adjusts viewmodel and HUD settings for a 5:4 display, and includes comprehensive key bindings and scripts for competitive play.
 
-- **Training Nades:**  
+- **Training Nades:**
   Tailored for grenade practice, this config removes time limits and freeze periods, allowing for uninterrupted training sessions. Money settings are maximized to let you purchase any equipment you need.
 
-- **Bunnyhop Config:**  
+- **Bunnyhop Config:**
   Eliminates or minimizes stamina limitations and enhances air acceleration to help you practice advanced bunnyhop techniques. Positional data is displayed for additional feedback.
 
-- **Demo UI Config:**  
+- **Demo UI Config:**
   Ideal for analyzing demos, this file disables post‑processing and fog, sets a custom FOV and skybox, and reduces HUD clutter for a distraction‑free viewing experience.
 
-- **Troll Crosshair Config:**  
+- **Troll Crosshair Config:**
   Offers an unconventional, exaggerated crosshair for fun or experimental sessions. This config is purely for entertainment and is not suited for competitive play.
 
 ---
