@@ -2,6 +2,7 @@
 
 Welcome to the **CS2 Configs by 1EF** repository. This collection features a variety of finely tuned configuration files optimized for Counter‑Strike 2. Whether you’re a competitive player seeking a pro‑level autoexec, a trainee working on grenade throws, a bunnyhop enthusiast, or just in the mood to experiment with unconventional crosshairs, this repo has something for you.
 
+https://settings.gg/1ef_official
 ---
 
 ## Contents
