@@ -6,7 +6,7 @@ Welcome to the **CS2 Configs by 1EF** repository. This collection features a var
 
 ## Contents
 
-- **autoexec_cs2.cfg**  
+- **autoexec.cfg**  
   A comprehensive, pro‑level autoexec configuration for CS2. It covers main settings, crosshair, HUD, radar, mouse, viewmodel, network, FPS & video, sound, scripts, and key bindings—all optimized for performance and clarity on a 5:4 resolution monitor.
 
 - **autoexec_nades.cfg**  
@@ -40,9 +40,9 @@ Welcome to the **CS2 Configs by 1EF** repository. This collection features a var
 3. **Execute the Config Files:**  
    Launch CS2, open the developer console (usually with the tilde key), and type:
    ```
-   exec autoexec_cs2
+   exec autoexec
    ```
-   Replace `autoexec_cs2` with the desired config name (for example, `autoexec_nades`, `autoexec_bunnyhop`, etc.) to load the corresponding settings.
+   Replace `autoexec` with the desired config name (for example, `autoexec_nades`, `autoexec_bunnyhop`, etc.) to load the corresponding settings.
 
 ---
 
