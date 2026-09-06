@@ -1,0 +1,19 @@
+# Public repository: ignore everything except reviewed paths.
+/*
+!/README.md
+!/AGENTS.md
+!/.gitignore
+!/autoexec.cfg
+!/autoexec_nades.cfg
+!/autoexec_demoui.cfg
+!/autoexec_bunnyhop.cfg
+!/autoexec_troll_crosshair.cfg
+!/legacy/
+/legacy/*
+!/legacy/csgo/
+/legacy/csgo/*
+!/legacy/csgo/autoexec.cfg
+!/legacy/csgo/autoexec_bunnyhop.cfg
+!/legacy/csgo/autoexec_crosshair.cfg
+!/legacy/csgo/autoexec_demo.cfg
+!/legacy/csgo/autoexec_nades.cfg

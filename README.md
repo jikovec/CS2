@@ -28,7 +28,7 @@ https://settings.gg/1ef_official
 
 1. **Clone or Download the Repository:**
    ```bash
-   git clone https://github.com/jikovec/cs2-configs.git
+   git clone https://github.com/jikovec/CS2.git
    ```
 
 2. **Copy the Config Files:**  
@@ -96,3 +96,10 @@ These configurations are provided "as-is" with no warranties. Some commands may 
 ---
 
 Happy gaming, and enjoy optimizing your CS2 experience with these configs!
+
+
+## Public scope and historical configurations
+
+This repository presents the public gaming profile and selected configuration files. Private photos, videos, recordings, account data and other personal files belong outside it. Synchronization selects reviewed files and never mirrors a whole gaming folder.
+
+Root configurations target CS2. `legacy/csgo/` preserves historical CS:GO configurations separately and must not be installed as CS2 settings. Imported text uses LF line endings with trailing whitespace removed. No in-game validation was performed during this import. Practice configurations may enable local-server cheats and are not instructions for competitive servers.
