@@ -1,0 +1,32 @@
+schema_version: 1
+project:
+  id: github.com/jikovec/CS2
+  name: CS2 public Counter-Strike configurations
+  type: other
+repository:
+  host: github
+  owner: jikovec
+  name: CS2
+  default_branch: main
+  canonical_remote: origin
+organization:
+  id: null
+  name: null
+ownership:
+  class: user-owned
+agent:
+  instructions: AGENTS.md
+  canonical_skills: skills/
+  project_specific_skills: skills/project/
+environment:
+  primary_runtime: null
+  package_manager: null
+  required_tools: [git]
+  source_files: [README.md, .gitignore]
+integrations:
+  directory: .agent/integrations/
+workflows:
+  directory: .agent/workflows/
+mind_seed:
+  enabled: false
+  binding: null
