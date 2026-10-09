@@ -53,7 +53,11 @@ preserve Git symlinks for this route. If the platform cannot, use the canonical
 file explicitly; do not claim automatic discovery works there.
 
 Claude's thin adapters live in `.claude/skills/`; `CLAUDE.md` imports `AGENTS.md`.
-Both adapter sets point to `skills/`. No provider hook, MCP connection, permission
+Both adapter sets point to `skills/`. The Claude adapters for `release`, `deploy`
+and `publish` also set `disable-model-invocation: true`, so Claude Code loads them
+only on an explicit `/release`, `/deploy` or `/publish`. Canonical skills and Codex
+adapters keep the portable name/description metadata; no validator enforces this,
+so check it during toolkit review. No provider hook, MCP connection, permission
 bypass or automatic synchronization is installed by this toolkit.
 
 Discovery references: [OpenAI local skills](https://learn.chatgpt.com/docs/build-skills),
