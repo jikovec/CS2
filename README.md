@@ -24,6 +24,31 @@ https://settings.gg/1ef_official
 
 ---
 
+## Crosshairs after the September 2026 CS2 update
+
+Valve replaced the old resolution-dependent crosshair settings with pixel-based
+controls and new styles. These root CS2 configs use the system introduced on
+22–30 September 2026; historical files in `legacy/csgo/` are unchanged.
+
+- **Competitive (`autoexec.cfg`):** Dynamic Quadrant (style `7`, Valve's
+  accuracy-aware default), compact length `2`, thickness `1`, gap `1` at a
+  1080-pixel reference height, with the existing RGB `127, 0, 255` color.
+  The `I` bind toggles the new `cl_crosshair_length` between `2` and `255`.
+- **Experimental (`autoexec_troll_crosshair.cfg`):** Static Quadrant (style
+  `9`) with the maximum supported length `255` and thickness `32`,
+  preserving the exaggerated magenta design.
+
+The active configs use `cl_crosshair_length`, `cl_crosshair_thickness`,
+`cl_crosshair_gap`, and `cl_crosshaircolor_a` rather than the removed
+pre-update names. The `cl_crosshair_screen_height "1080"` value is a scaling
+reference; it **does not** change the game's display resolution. Review the
+appearance at your actual resolution under **Settings → Crosshair/Scopes**.
+Run `exec autoexec` to restore the competitive crosshair after loading the
+experimental one. Appearance and gameplay still require an in-game check.
+
+Valve patch notes: [23 September](https://www.counter-strike.net/newsentry/674006995886408819)
+and [30 September](https://www.counter-strike.net/newsentry/675133527946166402).
+
 ## Installation
 
 1. **Clone or Download the Repository:**
