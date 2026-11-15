@@ -1,130 +1,81 @@
 # CS2 Configs by 1EF
 
-Welcome to the **CS2 Configs by 1EF** repository. This collection features a variety of finely tuned configuration files optimized for Counter‑Strike 2. Whether you’re a competitive player seeking a pro‑level autoexec, a trainee working on grenade throws, a bunnyhop enthusiast, or just in the mood to experiment with unconventional crosshairs, this repo has something for you.
+Personal Counter-Strike 2 client settings and separately selected practice, demo-review and experimental configurations.
 
-https://settings.gg/1ef_official
----
+Public profile: https://settings.gg/1ef_official
 
-## Contents
+## Current client profile
 
-- **autoexec.cfg**  
-  A comprehensive, pro‑level autoexec configuration for CS2. It covers main settings, crosshair, HUD, radar, mouse, viewmodel, network, FPS & video, sound, scripts, and key bindings—all optimized for performance and clarity on a 5:4 resolution monitor.
+`autoexec.cfg` contains the reviewed client preferences and key bindings saved on 15 November 2026:
 
-- **autoexec_nades.cfg**  
-  A training configuration designed specifically for practicing grenade throws. It enables cheats, grants infinite ammo, sets extended round times, and removes freeze and warmup delays, making it ideal for focused practice sessions.
+- Mouse sensitivity `0.8`; viewmodel FOV `68`, offsets `2 / 2 / -2`.
+- Crosshair style `5`, RGB `92 / 250 / 50`, opacity `255`, length `2`, thickness `1`, gap `1`, no outline, no dot and follow recoil disabled. Pixel scaling uses the saved reference height of `1440`.
+- Radar HUD scale `0.8`, map scale `0.35`, rotation disabled and teammate colours `1`.
+- F1 selects molotov/incendiary, F2 smoke, F3 flashbang and F4 HE grenade. SHIFT uses `+sprint`; mouse-wheel up/down jump.
+- I toggles crosshair length between `2` and `255`. H uses the existing bomb-drop alias; P and K are noclip and grenade-rethrow shortcuts for an appropriate local/practice context.
+- FPS limits retain the saved unlimited values. This is a personal profile, not a measured performance guarantee.
 
-- **autoexec_bunnyhop.cfg**  
-  This config is geared toward bunnyhopping practice. It adjusts various movement variables—eliminating stamina restrictions, increasing air acceleration, and even displaying positional data—to help you refine your technique.
+The autoexec applies its listed preferences and bindings, then calls `host_writeconfig`. It preserves unlisted keys and clears only explicitly listed unbound keys. Back up existing settings before loading it. If you change preferences in the game, update the corresponding autoexec entries before reloading the profile.
 
-- **autoexec_demoui.cfg**  
-  Optimized for demo review, this configuration minimizes distractions by disabling post‑processing, fog, and non‑essential HUD elements. It also sets a custom field‑of‑view and skybox for consistent, clear visuals when analyzing demos.
+Display mode, resolution, refresh rate and anti-aliasing remain in the separate `cs2_video.txt` file. The autoexec does not select a display backend, set a Windows audio-device identifier, or change Steam launch options. Server/debug boilerplate and cached UI activity markers are excluded from the personal autoexec.
 
-- **autoexec_troll_crosshair.cfg**  
-  A fun “troll” crosshair configuration that creates an exaggerated, oversized crosshair. This setup is meant for experimentation or lighthearted sessions rather than competitive play.
+## Configurations
 
----
+| File | Purpose |
+| --- | --- |
+| `autoexec.cfg` | Current personal client preferences, aliases and bindings. |
+| `autoexec_nades.cfg` | Local grenade practice: cheat-gated settings, purchases, long rounds, impacts, bot removal and a restart. |
+| `autoexec_bunnyhop.cfg` | Cheat-enabled local movement and bunnyhop practice. |
+| `autoexec_demoui.cfg` | Demo-review helper with demo UI, fog/FOV overrides and a reduced HUD. Current-build support and demo/server context matter. |
+| `autoexec_troll_crosshair.cfg` | Separate experimental style `9` crosshair with oversized pixel settings and the magenta theme. Run `exec autoexec` to restore the personal profile. |
 
-## Crosshairs after the September 2026 CS2 update
+The experimental crosshair uses current pixel-setting names (`cl_crosshair_length`, `cl_crosshair_thickness`, `cl_crosshair_gap`, `cl_crosshaircolor_a` and explicit outline colour channels). Its `1080` reference height controls crosshair scaling; it does not set display resolution. The helper migration is source-checked; its final appearance has not been verified in-game.
 
-Valve replaced the old resolution-dependent crosshair settings with pixel-based
-controls and new styles. These root CS2 configs use the system introduced on
-22–30 September 2026; historical files in `legacy/csgo/` are unchanged.
+## Reviewed saved settings
 
-- **Competitive (`autoexec.cfg`):** Dynamic Quadrant (style `7`, Valve's
-  accuracy-aware default), compact length `2`, thickness `1`, gap `1` at a
-  1080-pixel reference height, with the existing RGB `127, 0, 255` color.
-  The `I` bind toggles the new `cl_crosshair_length` between `2` and `255`.
-- **Experimental (`autoexec_troll_crosshair.cfg`):** Static Quadrant (style
-  `9`) with the maximum supported length `255` and thickness `32`,
-  preserving the exaggerated magenta design.
+The [saved-settings snapshot](snapshots/cs2/README.md) contains the reviewed configuration files saved on 15 November 2026. It supersedes the older uploaded ZIP for current-profile use. Private challenge/device entries, cached activity markers and saved launch-state data are omitted from the machine-settings copy. Original local files remain outside this public repository.
 
-The active configs use `cl_crosshair_length`, `cl_crosshair_thickness`,
-`cl_crosshair_gap`, and `cl_crosshaircolor_a` rather than the removed
-pre-update names. The `cl_crosshair_screen_height "1080"` value is a scaling
-reference; it **does not** change the game's display resolution. Review the
-appearance at your actual resolution under **Settings → Crosshair/Scopes**.
-Run `exec autoexec` to restore the competitive crosshair after loading the
-experimental one. Appearance and gameplay still require an in-game check.
+The video snapshot stores **1920×1440 (4:3), Fullscreen Windowed and CMAA2**, with MSAA and VSync disabled. It does not claim that a custom 5:4 mode is selectable in the game's menu. Review display and hardware fields before restoring a video snapshot on another system.
 
-Valve patch notes: [23 September](https://www.counter-strike.net/newsentry/674006995886408819)
-and [30 September](https://www.counter-strike.net/newsentry/675133527946166402).
+For a settings-sharing service, the main files are the reviewed copies of `cs2_machine_convars.vcfg`, `cs2_user_convars_0_slot0.vcfg`, `cs2_user_keys_0_slot0.vcfg`, `cs2_video.txt`, plus the maintained root `autoexec.cfg`. The three additional key-slot files are empty configuration objects preserved for completeness.
 
-## Installation
+## Installation and use
 
-1. **Clone or Download the Repository:**
-   ```bash
-   git clone https://github.com/jikovec/CS2.git
-   ```
+Clone the repository:
 
-2. **Copy the Config Files:**  
-   Place the downloaded config files into your CS2 configuration directory. This is typically found at:
-   ```
-   C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg
-   ```
-   (Adjust the path if your installation directory differs.)
+```sh
+git clone https://github.com/jikovec/CS2.git
+```
 
-3. **Execute the Config Files:**  
-   Launch CS2, open the developer console (usually with the tilde key), and type:
-   ```
-   exec autoexec
-   ```
-   Replace `autoexec` with the desired config name (for example, `autoexec_nades`, `autoexec_bunnyhop`, etc.) to load the corresponding settings.
+Copy only the chosen root `.cfg` files to the game's configuration directory:
 
----
+- Windows example: `C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg`.
+- Linux: `<Steam library>/steamapps/common/Counter-Strike Global Offensive/game/csgo/cfg/`.
 
-## Usage Details
+Saved `.vcfg` and video settings belong separately under Steam's `userdata/<account>/730/local/cfg/` directory. Close the game and back up the matching installed files before restoring selected snapshots. Do not copy the whole snapshot directory into the executable-config location or run a `.vcfg`/video snapshot using `exec`.
 
-Each configuration file is extensively commented for clarity. Here’s a brief overview of what each file offers:
+In the CS2 developer console, load one selected root configuration:
 
-- **Autoexec:**
-  Optimizes network settings for low latency, adjusts viewmodel and HUD settings for a 5:4 display, and includes comprehensive key bindings and scripts for competitive play.
+```text
+exec autoexec
+exec autoexec_nades
+exec autoexec_bunnyhop
+exec autoexec_demoui
+exec autoexec_troll_crosshair
+```
 
-- **Training Nades:**
-  Tailored for grenade practice, this config removes time limits and freeze periods, allowing for uninterrupted training sessions. Money settings are maximized to let you purchase any equipment you need.
+The last four are separate choices, not startup dependencies. Practice helpers may enable local-server cheats and are not instructions for competitive servers. Aliases and server-context shortcuts still need appropriate gameplay testing.
 
-- **Bunnyhop Config:**
-  Eliminates or minimizes stamina limitations and enhances air acceleration to help you practice advanced bunnyhop techniques. Positional data is displayed for additional feedback.
+## Validation boundaries
 
-- **Demo UI Config:**
-  Ideal for analyzing demos, this file disables post‑processing and fog, sets a custom FOV and skybox, and reduces HUD clutter for a distraction‑free viewing experience.
+An earlier revision of the personal profile was executed in the installed Linux client: owner-provided console output reached `loaded 1EF` without reported unknown-command or rejected-setting messages, and user-config saves succeeded. A subsequent comparison preserved the selected values, bindings and video file. Later colour, sensitivity and teammate-colour updates were reconciled against the final saved settings; do not treat that earlier transcript as execution proof for every byte of the final revision.
 
-- **Troll Crosshair Config:**
-  Offers an unconventional, exaggerated crosshair for fun or experimental sessions. This config is purely for entertainment and is not suited for competitive play.
-
----
-
-## Customization & Contributions
-
-Feel free to modify any of these configs to better suit your playstyle or training needs. Before making changes, it’s always a good idea to back up your existing configurations.
-
-Contributions are welcome! If you have improvements, new config ideas, or bug fixes, please open a pull request or submit an issue. Kindly ensure your changes follow the repository’s style and include appropriate comments.
-
----
-
-## Additional Suggestions
-
-- **Performance Monitoring:**  
-  If CS2 supports additional debugging tools (such as net graphs or new demo UI commands), consider integrating these to monitor performance in real time.
-
-- **Keybind Toggles:**  
-  You might add keybinds to quickly toggle between your competitive and training configs, or even between different crosshair setups.
-
-- **Regular Updates:**  
-  As CS2 evolves, keep an eye on new console variables and adjust your configs accordingly. Maintaining versioned backups will help you revert if necessary.
-
----
-
-## Disclaimer
-
-These configurations are provided "as-is" with no warranties. Some commands may be cheat‑protected or subject to change as CS2 develops. Use them at your own risk and always ensure compliance with the latest CS2 policies.
-
----
-
-Happy gaming, and enjoy optimizing your CS2 experience with these configs!
-
+Final source checks compare the personal autoexec with the saved selections, verify binding completeness and uniqueness, check the reviewed snapshot structure and privacy omissions, preserve historical files and recorded line endings, and check Git whitespace and the publication allowlist. The repository has no configured CI workflow. Static name checks are not proof of command behaviour, visual correctness, performance or helper acceptance in-game.
 
 ## Public scope and historical configurations
 
-This repository presents the public gaming profile and selected configuration files. Private photos, videos, recordings, account data and other personal files belong outside it. Synchronization selects reviewed files and never mirrors a whole gaming folder.
+Only reviewed configuration/profile files are published. Private photos, videos, demos, account data, credentials, raw exports and unrelated personal files remain outside the repository. The deny-by-default ignore rules allow only named reviewed paths.
 
-Root configurations target CS2. `legacy/csgo/` preserves historical CS:GO configurations separately and must not be installed as CS2 settings. Imported text uses LF line endings with trailing whitespace removed. No in-game validation was performed during this import. Practice configurations may enable local-server cheats and are not instructions for competitive servers.
+`legacy/csgo/` preserves historical CS:GO configurations unchanged. They must not be installed as current CS2 settings. The root personal profile and final saved snapshots use LF; the four helper configs retain their existing CRLF line endings and final-line conventions.
+
+Source publication is distinct from an installed-game change or in-game acceptance.

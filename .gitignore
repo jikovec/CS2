@@ -17,3 +17,17 @@
 !/legacy/csgo/autoexec_crosshair.cfg
 !/legacy/csgo/autoexec_demo.cfg
 !/legacy/csgo/autoexec_nades.cfg
+
+# Reviewed CS2 saved settings; keep all other snapshot paths ignored.
+!/snapshots/
+/snapshots/*
+!/snapshots/cs2/
+/snapshots/cs2/*
+!/snapshots/cs2/README.md
+!/snapshots/cs2/cs2_machine_convars.vcfg
+!/snapshots/cs2/cs2_user_convars_0_slot0.vcfg
+!/snapshots/cs2/cs2_user_keys_0_slot0.vcfg
+!/snapshots/cs2/cs2_video.txt
+!/snapshots/cs2/cs2_user_keys_0_slot1.vcfg
+!/snapshots/cs2/cs2_user_keys_0_slot2.vcfg
+!/snapshots/cs2/cs2_user_keys_0_slot3.vcfg
